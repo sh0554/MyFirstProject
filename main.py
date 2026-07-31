@@ -1,40 +1,8 @@
-def add(a, b):
-    return a + b
+print("===== 나의 메모장 =====")
 
+memo = input("저장할 내용을 입력하세요: ")
 
-def subtract(a, b):
-    return a - b
+with open("memo.txt", "w", encoding="utf-8") as file:
+    file.write(memo)
 
-
-def multiply(a, b):
-    return a * b
-
-
-def divide(a, b):
-    return a / b
-
-
-print("===== Python 계산기 =====")
-
-num1 = int(input("첫 번째 숫자: "))
-operator = input("연산자 입력 (+ - * /): ")
-num2 = int(input("두 번째 숫자: "))
-
-
-if operator == "+":
-    result = add(num1, num2)
-
-elif operator == "-":
-    result = subtract(num1, num2)
-
-elif operator == "*":
-    result = multiply(num1, num2)
-
-elif operator == "/":
-    result = divide(num1, num2)
-
-else:
-    result = "지원하지 않는 연산자입니다."
-
-
-print("결과:", result)
+print("저장 완료!")
